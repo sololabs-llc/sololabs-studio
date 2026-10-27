@@ -17,7 +17,7 @@
       outDir: 'build',
       rollupOptions: {
         input: Object.fromEntries(
-          ['', 'marquee'].map((page) => [
+          ['', 'marquee', 'marquee-2'].map((page) => [
             page || 'main',
             path.resolve(__dirname, page, 'index.html'),
           ]),

@@ -54,6 +54,7 @@ a {
 .mq-band-b {
   top: 58%;
   background: #f8e46f;
+  color: #000;
   transform: rotate(4deg);
 }
 .mq-track {
@@ -89,3 +90,98 @@ a {
 .mq-tl { top: 0; left: 0; font-size: 32px; }
 .mq-tr { top: 0; right: 0; }
 .mq-br { bottom: 0; right: 0; }
+
+/* Marquee 2 */
+.mq-drop {
+  display: block;
+  border-left: 0;
+  border-right: 0;
+  padding: 0;
+  text-align: left;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.mq-band-email {
+  top: 80%;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  transform: rotate(-2deg);
+}
+.mq-band-email:hover {
+  background: #000;
+  color: #f8e46f;
+}
+.mq-bubble {
+  position: absolute;
+  z-index: 1;
+  left: calc(50% + min(70vw, 70vh) * 0.12);
+  top: calc(50% - min(70vw, 70vh) * 0.5);
+  max-width: min(220px, 40vw);
+  padding: 10px 14px;
+  background: #fff;
+  border: 3px solid #000;
+  box-shadow: 6px 6px 0 #000;
+  font-weight: 700;
+}
+.mq-bubble::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  bottom: -11px;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
+  transform: rotate(45deg);
+}
+.mq-words {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.mq-word {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 0.3em;
+  border: 4px solid #000;
+  font-family: "Archivo Black", sans-serif;
+  font-size: clamp(18px, 3.6vw, 56px);
+  line-height: 1.2;
+  white-space: nowrap;
+  pointer-events: auto;
+  touch-action: none;
+  user-select: none;
+  cursor: grab;
+}
+.mq-word:active {
+  cursor: grabbing;
+}
+.mq-word-a {
+  background: #000;
+  color: #f8e46f;
+}
+.mq-word-b {
+  background: #f8e46f;
+}
+.mq-bl {
+  bottom: 0;
+  left: 0;
+}
+.mq-reset {
+  z-index: 3;
+  margin: 16px;
+  padding: 8px 12px;
+  border: 3px solid #000;
+  background: #f8e46f;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.mq-reset:hover {
+  background: #000;
+  color: #f8e46f;
+}
