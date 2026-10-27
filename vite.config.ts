@@ -15,14 +15,6 @@
     build: {
       target: 'esnext',
       outDir: 'build',
-      rollupOptions: {
-        input: Object.fromEntries(
-          ['', 'marquee', 'marquee-2'].map((page) => [
-            page || 'main',
-            path.resolve(__dirname, page, 'index.html'),
-          ]),
-        ),
-      },
     },
     server: {
       port: 3000,
